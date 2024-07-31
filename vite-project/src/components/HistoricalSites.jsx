@@ -11,20 +11,7 @@
                 <Link to={`/article/${historicalsite.slug}`}>
                   <img src={historicalsite.coverImage.url} alt='weird' />
                 </Link>
-                <div className='categories'>
-                  {
-                    historicalsite.categories?.map(category => (
-                      <Link
-                        to={`/historicalsites/${category.slug}`}
-                        key={category.id}
-                        className='category'
-                        style={{ background: category.color.hex }}
-                      >
-  
-                      </Link>
-                    ))
-                  }
-                </div>
+
               </div>
               <div className='sites-text'>
                 <div className='category-time'>
@@ -34,7 +21,8 @@
                         to={`/historicalsites/${category.slug}`}
                         key={category.id}
                         className='category'
-                        style={{ background: category.color.hex }}
+                        //style={{ background: category.color.hex }}
+                        style={{background: 'white'}}
                       >
                         {category.name}
                       </Link>

@@ -138,10 +138,9 @@ nav :is(.fa-bars, .fa-xmark){
 }
 
 
-.sites-img .categories .category{
-  padding: 2px 10px;
-  font-size: 0.9rem;
-  color: #000;
+.sites-text .category-time .category{
+  color: black;
+  font-weight: 600;
 }
 
 .sites-text h3{
