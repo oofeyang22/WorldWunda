@@ -49,6 +49,7 @@ main{
   width: 100%;
   min-height: calc(100vh - 250px);
 }
+
 header{
   width: 100%;
   background: #fff;
@@ -95,11 +96,56 @@ transition: all ease 0.3s
 }
 
 nav :is(.fa-bars, .fa-xmark){
-  color: #fff;
+  color: black;
   display: none;
+  cursor: pointer;
+}
+
+.mobileLinks{
+  display: none;
+
 }
 
 
+@media (max-width: 768px){
+  .large{
+    display: none;
+  }
+  nav .menu-lists{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  nav .menu-lists li {
+
+    margin: 1px;
+  
+  }
+
+
+  nav :is(.fa-bars, .fa-xmark){
+    display: block;
+    cursor: pointer;
+  
+  }
+
+  .mobileLinks{
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 50%;
+      height: calc(100vh - 80px);
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      z-index: 100;
+  
+  }
+
+}
 .sites-container{
   width: 95%;
   margin: 20px auto;
@@ -246,6 +292,8 @@ nav :is(.fa-bars, .fa-xmark){
   margin: 10px 0;
 }
 
+
+
 .site-container article .content p {
   line-height: 1.8rem;
   margin: 10px 0;
@@ -256,17 +304,17 @@ nav :is(.fa-bars, .fa-xmark){
   line-height: 1.8rem;
 }
 .center{
-  width: 600px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
 
-  position: relative;
+
 }
 
 .center img{
   width: inherit;
   height: inherit;
-  position: absolute;
-  left: 55%;
+
+
 }
 .comments{
   margin-top: 50px;
